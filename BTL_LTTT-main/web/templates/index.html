@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Compression GUI</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <meta name="theme-color" content="#2b6cb0">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Chọn loại mã hóa</h1>
+      <p class="subtitle">Chọn thuật toán, kiểu input, hoặc upload / chọn sample có sẵn.</p>
+    </header>
+
+    <main class="card form-card">
+      <form id="runForm">
+        <div class="row">
+          <label class="label">Thuật toán</label>
+          <select id="algorithm" name="algorithm" class="select">
+            <option value="huffman">Huffman</option>
+            <option value="shannonfano">Shannon-Fano</option>
+            <option value="sfe">Shannon-Fano-Elias</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label class="label">Input mode</label>
+          <select id="inputMode" name="inputMode" class="select">
+            <option value="text">Nhập tay (text)</option>
+            <option value="file">Upload file</option>
+            <option value="sample">Chọn sample (nếu có)</option>
+          </select>
+        </div>
+
+        <div id="textArea" class="row">
+          <label class="label">Text input</label>
+          <textarea id="text" name="text" rows="6" class="textarea" placeholder="Nhập văn bản ở đây..."></textarea>
+        </div>
+
+        <div id="fileArea" class="row" style="display:none">
+          <label class="label">File upload</label>
+          <input type="file" id="file" name="file" class="file">
+        </div>
+
+        <div id="sampleArea" class="row" style="display:none">
+          <label class="label">Sample file</label>
+          <select id="sample" name="sample" class="select"></select>
+        </div>
+
+        <div class="row actions">
+          <button type="submit" class="btn primary">Run</button>
+          <button type="button" id="clearBtn" class="btn">Clear</button>
+        </div>
+      </form>
+    </main>
+
+    <section class="card output-card">
+      <h2>Output</h2>
+      <pre id="output" class="output-pre">Chưa có kết quả.</pre>
+    </section>
+
+    <footer class="footer">Web GUI — sử dụng để chạy từng thuật toán trong repo</footer>
+  </div>
+
+  <script src="/static/main.js"></script>
+</body>
+</html>

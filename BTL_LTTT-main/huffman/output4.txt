@@ -1,0 +1,17 @@
+--- MINH HOA MA HOA HUFFMAN ---
+Nhap van ban: 
+1. BANG MA DA DUOC TAO:
+Ky tu     Ma Huffman
+------------------------
+(space)   0
+
+2. CHUOI SAU KHI MA HOA:
+000
+
+3. GIAI MA DE KIEM TRA:
+"   "
+
+4. PHAN TICH HIEU SUAT:
+- Kich thuoc goc: 24 bits
+- Kich thuoc sau nen: 3 bits
+- Ty le nen: 12.50%
